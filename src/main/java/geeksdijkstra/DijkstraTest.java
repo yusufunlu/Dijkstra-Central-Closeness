@@ -33,14 +33,14 @@ public class DijkstraTest {
             dijkstra.printPaths();
             double closenessCentrality = dijkstra.closenessCentrality();
 
-            DecimalFormat df = new DecimalFormat("#.###");
+            DecimalFormat df = new DecimalFormat("#.####");
             System.out.printf("For Source %s Closeness Centrality: %s \n\n",key.getVertex(), df.format(closenessCentrality));
         });
     }
 
     public static ArrayList<List<String>> fillTestData() throws IOException {
         ArrayList<List<String>> records = new ArrayList<>();
-        InputStream is = Graph.class.getResourceAsStream("/test3.csv");
+        InputStream is = Graph.class.getResourceAsStream("/test.csv");
         InputStreamReader streamReader = new InputStreamReader(is, StandardCharsets.UTF_8);
         BufferedReader reader = new BufferedReader(streamReader);
         for (String line; (line = reader.readLine()) != null;) {
